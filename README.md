@@ -1,63 +1,69 @@
-# Predict_customer_churn_risk_dashboard_analysis
-This is my project which analyzes customer data to predict churn and identify high-risk customers using basic data analysis and techniques.
-# 📊 Predicting Customer Churn and Risk Analysis for future business with Excel and Power BI
+Predict_customer_churn_risk_dashboard_analysis/
+├── data/
+│   └── customer_data.csv  # if allowed, otherwise use a sample or mention location
+├── notebooks/
+│   └── churn_analysis.ipynb
+├── reports/
+│   └── churn_dashboard_screenshots.png
+├── dashboard/
+│   └── churn_dashboard.pbix  # for Power BI or .twbx for Tableau
+├── README.md
 
-This project analyzes telecom customer data to identify churn patterns and high-risk segments. It uses **Excel** for data preprocessing and **Power BI** for interactive dashboards.
 
----
 
-## 📁 Dataset Overview
+# Customer Churn Risk Prediction & Dashboard Analysis
 
-**Sheet**: `01 Churn-Dataset`  
-**Rows**: ~7,000  
-**Columns**: 23  
-Includes customer demographics, service usage, support tickets, billing, and churn labels.
+This project focuses on predicting customer churn and visualizing churn risk through an interactive dashboard using Power BI.
 
-### Key Columns:
-- `customerID`: Unique customer identifier  
-- `gender`, `SeniorCitizen`, `Partner`, `Dependents`: Demographics  
-- `tenure`: Number of months as a customer  
-- `PhoneService`, `InternetService`, `StreamingTV`: Services subscribed  
-- `Contract`, `PaperlessBilling`, `PaymentMethod`: Account & billing  
-- `MonthlyCharges`, `TotalCharges`: Financial metrics  
-- `numAdminTickets`, `numTechTickets`: Support interaction frequency  
-- `Churn`: Target column (Yes/No)
+## 📌 Objectives
 
----
+- Identify factors contributing to customer churn.
+- Predict which customers are at high risk of leaving.
+- Create a dashboard for business stakeholders to monitor churn trends.
 
-## 🛠 Steps for Analysis
+## 📊 Tools & Technologies
 
-### 1. **Excel – Data Preprocessing**
-- **Remove Duplicates**: Ensure `customerID` is unique
-- **Handle Missing Values**: Especially in `TotalCharges` (may be blanks)
-- **Transform Columns**:
-  - Convert categorical columns to consistent labels (e.g., Yes/No → 1/0)
-  - Create new columns (e.g., `AverageCharges = TotalCharges / tenure`)
-- **Save Clean File**: Save as `cleaned_customer_churn.xlsx`
+- Python (pandas, scikit-learn, matplotlib)
+- Excel for preprocessing
+- Power BI for dashboard creation
 
-### 2. **Power BI – Dashboard Creation**
-- **Import Cleaned Excel File**
-- **Create Visuals**:
-  - **KPI Cards**: Churn rate, Avg Monthly Charges, Avg Tenure
-  - **Pie Charts**: Churn % by gender, contract type
-  - **Bar Charts**: MonthlyCharges by Churn, numTechTickets vs Churn
-  - **Slicers**: Gender, Contract, InternetService
-- **Add Filters & Tooltips** for interactivity
-- **Create a Summary Page**:
-  - Key insights from churn trends
-  - Recommendations to reduce churn
+## 🧩 Data Description
 
----
+The dataset contains customer information such as:
 
-## 🔍 Example Questions to Explore
-- Which service types correlate with higher churn?
-- Do customers with more tech support tickets churn more?
-- How does contract type (e.g., Month-to-month vs. One year) affect churn?
+- Demographics (age, gender)
+- Service usage (calls, internet)
+- Subscription details (plan type, contract, tenure)
+- Churn label (Yes/No)
 
----
+> 📁 Sample dataset file: `data/customer_data.csv`
 
-## ✅ Outcome
-A fully interactive Power BI dashboard highlighting:
-- Churn drivers  
-- High-risk customer segments  
-- Actionable retention insights
+## ⚙️ Process Overview
+
+1. **Data Cleaning & Preparation** (Python/Excel)
+2. **Churn Prediction Model** (RandomForestClassifier)
+3. **Feature Importance Analysis** (SHAP values)
+4. **Customer Segmentation**
+5. **Power BI Dashboard Development**
+
+## 📈 Key Insights
+
+- Longer tenure reduces churn probability.
+- Month-to-month contracts have higher churn.
+- Customers with multiple services churn less.
+
+## 📊 Dashboard Preview
+
+> ![Dashboard Screenshot](reports/churn_dashboard_screenshots.png)
+
+## 💡 Future Improvements
+
+- Use a larger dataset from a real telecom provider.
+- Deploy the model in a web app using Streamlit.
+- Add real-time data refresh to Power BI dashboard.
+
+## 🧠 Author
+
+Ramya Badathala  
+[LinkedIn](#) | [GitHub](https://github.com/RamyaBadathala)
+
