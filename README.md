@@ -1,69 +1,99 @@
+# 📉 Customer Churn Risk Prediction & Dashboard Analysis
+
+This project focuses on identifying high-risk customers likely to churn using data analysis and visual representation through a Power BI dashboard.
+
+## 📌 Project Objective
+
+To analyze customer behavior patterns and predict churn risk using Excel and Power BI. The dashboard enables business teams to track churn trends, identify at-risk customers, and make data-driven retention strategies.
+
+---
+
+## 🧰 Tools & Technologies Used
+
+- **Excel** – Data cleaning and preprocessing
+- **Power BI** – Dashboard development and data visualization
+- **Python (Optional)** – Can be used for further machine learning model development
+
+---
+
+## 📊 Dataset
+
+- **File**: `Customer analysis Dataset.xlsx`
+- Contains customer demographics, service usage, subscription types, and churn status.
+- Key columns: `Gender`, `SeniorCitizen`, `Partner`, `Dependents`, `Tenure`, `MonthlyCharges`, `Contract`, `PaymentMethod`, `Churn`, etc.
+
+---
+
+## 🧪 Workflow
+
+1. **Data Cleaning**  
+   Performed in Excel (handled nulls, formatted columns).
+
+2. **Feature Understanding**  
+   Explored patterns in tenure, payment method, contract type, etc.
+
+3. **Churn Analysis**  
+   Identified key churn indicators based on filters and charts.
+
+4. **Dashboard Creation**  
+   Built in Power BI with filters and visual elements like:
+   - Pie charts for churn distribution
+   - Bar graphs for contract types vs churn
+   - Risk segments and key metrics
+
+---
+
+## 📸 Dashboard Preview
+
+![Churn Dashboard](images/customer%20churn%20dashboard.png)  
+![Risk Dashboard](images/customer%20risk%20dashboard.png)
+
+---
+
+## 📁 Project Structure
+
 Predict_customer_churn_risk_dashboard_analysis/
 ├── data/
-│   └── customer_data.csv  # if allowed, otherwise use a sample or mention location
-├── notebooks/
-│   └── churn_analysis.ipynb
-├── reports/
-│   └── churn_dashboard_screenshots.png
+│ └── Customer analysis Dataset.xlsx
 ├── dashboard/
-│   └── churn_dashboard.pbix  # for Power BI or .twbx for Tableau
-├── README.md
+│ └── Customer Analysis Dashboard.pbix
+├── images/
+│ ├── customer churn dashboard.png
+│ └── customer risk dashboard.png
+└── README.md
 
 
 
-# Customer Churn Risk Prediction & Dashboard Analysis
+---
 
-This project focuses on predicting customer churn and visualizing churn risk through an interactive dashboard using Power BI.
+## 📌 Key Insights
 
-## 📌 Objectives
+- Customers on **month-to-month** contracts have the **highest churn**.
+- **Longer tenure** correlates with **lower churn probability**.
+- Customers using **electronic checks** churn more frequently.
+- **Senior citizens** have a slightly higher churn rate.
 
-- Identify factors contributing to customer churn.
-- Predict which customers are at high risk of leaving.
-- Create a dashboard for business stakeholders to monitor churn trends.
+---
 
-## 📊 Tools & Technologies
+## 🌐 Future Enhancements
 
-- Python (pandas, scikit-learn, matplotlib)
-- Excel for preprocessing
-- Power BI for dashboard creation
+- Add a predictive machine learning model using Python (Random Forest or Logistic Regression).
+- Integrate dashboard with real-time data using Power BI service.
+- Build a web app using Streamlit or Flask for live predictions.
 
-## 🧩 Data Description
+---
 
-The dataset contains customer information such as:
+## 👩‍💻 Author
 
-- Demographics (age, gender)
-- Service usage (calls, internet)
-- Subscription details (plan type, contract, tenure)
-- Churn label (Yes/No)
+**Ramya Badathala**  
+📧 [YourEmail@example.com]  
+🔗 [GitHub Profile](https://github.com/RamyaBadathala)
 
-> 📁 Sample dataset file: `data/customer_data.csv`
+---
 
-## ⚙️ Process Overview
+## ⚖️ License
 
-1. **Data Cleaning & Preparation** (Python/Excel)
-2. **Churn Prediction Model** (RandomForestClassifier)
-3. **Feature Importance Analysis** (SHAP values)
-4. **Customer Segmentation**
-5. **Power BI Dashboard Development**
+This project is open-source and available under the [MIT License](LICENSE).
 
-## 📈 Key Insights
 
-- Longer tenure reduces churn probability.
-- Month-to-month contracts have higher churn.
-- Customers with multiple services churn less.
-
-## 📊 Dashboard Preview
-
-> ![Dashboard Screenshot](reports/churn_dashboard_screenshots.png)
-
-## 💡 Future Improvements
-
-- Use a larger dataset from a real telecom provider.
-- Deploy the model in a web app using Streamlit.
-- Add real-time data refresh to Power BI dashboard.
-
-## 🧠 Author
-
-Ramya Badathala  
-[LinkedIn](#) | [GitHub](https://github.com/RamyaBadathala)
 
